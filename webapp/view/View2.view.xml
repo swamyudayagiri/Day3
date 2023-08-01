@@ -1,0 +1,12 @@
+<mvc:View controllerName="project1.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
+    <Page id="page" title="View 2">
+        <content >
+          
+           <Text text="{form3>/empId}"></Text>
+           <Text text="{form3>/empName}"></Text>
+        </content>
+    </Page>
+</mvc:View>

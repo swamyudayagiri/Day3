@@ -1,0 +1,45 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
+    <Page id="page" title="{i18n>title}">
+        <content >
+          
+            <Button text="Go to View2" press="onNavPress"></Button>
+            <f:SimpleForm layout="ResponsiveGridLayout">
+                <Label text="Emp Id"></Label>              
+                <Input value="{form2>/empId}"></Input>
+
+                <Label text="Emp Name"></Label>              
+                <Input value="{form2>/empName}"></Input>
+
+                <Label text=""></Label>              
+                        <Button text="Save" press="onSaveForm"></Button>      
+            </f:SimpleForm>
+            
+
+            <Table items="{EmpModel>/empDetails/details}" >
+                <columns>
+                    <Column  >
+                    <Text text="Employee Id"  />
+                    </Column>
+                    <Column  >
+                        <Text text="Employee Name"  />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem  press="onItemPress" type="Active">
+                        <cells>
+                            <Text text="{EmpModel>empId}"  />
+                            <Text text="{EmpModel>empName}"  />
+
+                        </cells>
+                    </ColumnListItem>
+
+                </items>
+
+            </Table>
+
+        </content>
+    </Page>
+</mvc:View>
